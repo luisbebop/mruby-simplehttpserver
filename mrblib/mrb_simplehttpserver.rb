@@ -73,7 +73,8 @@ class SimpleHttpServer
       'REQUEST_METHOD' => req.method,
       'PATH_INFO'      => req.path || ROOT_PATH,
       'QUERY_STRING'   => req.query,
-      'HTTP_VERSION'   => HTTP_VERSION
+      'HTTP_VERSION'   => HTTP_VERSION,
+      'RACK_INPUT'     => req.body
     )
   end
 
